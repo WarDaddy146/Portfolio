@@ -4,13 +4,13 @@ import fs from "fs"
 
 export async function GET() {
   try {
-    const pdfPath = path.join(process.cwd(), 'public', 'Safari.pdf')
+    const pdfPath = path.join(process.cwd(), 'public', 'AliAkbar-Resume.pdf')
     const pdfBuffer = fs.readFileSync(pdfPath)
     
     return new NextResponse(pdfBuffer, {
       headers: {
         "Content-Type": "application/pdf",
-        "Content-Disposition": 'inline; filename="Safari.pdf"',
+        "Content-Disposition": 'inline; filename="AliAkbar-Resume.pdf"',
       },
     })
   } catch (error) {
