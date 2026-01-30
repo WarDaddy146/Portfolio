@@ -1,6 +1,16 @@
 import { BlogPostPageClient } from "./BlogPostPageClient"
 import type { Metadata } from "next"
 
+// Disable dynamic params for static export
+export const dynamicParams = false
+
+// Generate static paths for all blog posts
+export async function generateStaticParams() {
+  // Return an empty array if you don't have blog posts yet
+  // or add your blog post slugs here
+  return []
+}
+
 // This would typically come from a CMS or markdown files
 const getPostBySlug = (slug: string) => {
   return {
