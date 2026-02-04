@@ -1,0 +1,414 @@
+================================================================================
+                    PORTFOLIO WEBSITE - PROJECT GUIDE
+================================================================================
+
+PROJECT STRUCTURE
+================================================================================
+
+giovani-dev-portfolio-website/
+│
+├── app/                          # All pages and routes
+│   ├── page.tsx                  # Homepage (/)
+│   ├── layout.tsx                # Main layout wrapper
+│   ├── globals.css               # Global styles
+│   ├── blog/
+│   │   ├── page.tsx              # Blog listing page (/blog)
+│   │   └── [slug]/
+│   │       └── page.tsx          # Individual blog post pages
+│   ├── contact/
+│   │   └── page.tsx              # Contact page (/contact)
+│   ├── projects/
+│   │   └── page.tsx              # Projects page (/projects)
+│   ├── publications/
+│   │   └── page.tsx              # Publications page (/publications)
+│   ├── resume/
+│   │   └── page.tsx              # Resume page (/resume)
+│   ├── talks/
+│   │   └── page.tsx              # Talks page (/talks)
+│   └── api/
+│       └── resume-pdf/
+│           └── route.ts          # API endpoint for PDF download
+│
+├── components/                   # Reusable UI components
+│   ├── header.tsx                # Navigation header
+│   ├── footer.tsx                # Footer
+│   ├── hero-section.tsx          # Homepage hero section
+│   ├── featured-projects.tsx    # Projects showcase
+│   ├── featured-blog-posts.tsx  # Blog posts showcase
+│   ├── theme-provider.tsx       # Dark/light theme
+│   └── ui/                       # UI library components (buttons, cards, etc.)
+│
+├── data/                         # Content data files
+│   ├── resume-data.ts            # Your resume/CV information
+│   ├── projects-data.ts          # Your projects information
+│   └── blog-data.ts              # Your blog posts information
+│
+├── public/                       # Static files (images, PDFs, etc.)
+│   ├── images/
+│   │   └── profile.png           # Your profile photo
+│   ├── AliAkbar-Resume.pdf       # Your resume PDF
+│   └── favicon.ico               # Website icon
+│
+├── next.config.mjs               # Next.js configuration
+├── tailwind.config.ts            # Tailwind CSS configuration
+├── package.json                  # Project dependencies
+└── tsconfig.json                 # TypeScript configuration
+
+
+================================================================================
+                    HOW TO CHANGE EACH COMPONENT
+================================================================================
+
+1. PERSONAL INFORMATION (Name, Title, Bio, Contact)
+────────────────────────────────────────────────────────────────────────────
+   File: data/resume-data.ts
+   
+   Look for: personalInfo section
+   
+   Change:
+   - name: Your full name
+   - title: Your job title/role
+   - bio: Your biography/description
+   - email: Your email address
+   - phone: Your phone number
+   - location: Your location
+   - website: Your website URL
+   - linkedin: Your LinkedIn username
+   - github: Your GitHub username
+   
+
+2. PROFILE PHOTO
+────────────────────────────────────────────────────────────────────────────
+   Step 1: Replace the image file
+           Copy your photo to: public/images/profile.png
+           Command: cp /path/to/your-photo.jpg public/images/profile.png
+   
+   Step 2: If using a different filename, update:
+           File: components/hero-section.tsx
+           Line: ~125
+           Change: src="/Portfolio/images/profile.png"
+           To: src="/Portfolio/images/YOUR-PHOTO-NAME.jpg"
+
+
+3. RESUME/CV PDF
+────────────────────────────────────────────────────────────────────────────
+   Step 1: Replace the PDF file
+           Copy your resume to: public/AliAkbar-Resume.pdf
+           Command: cp /path/to/your-resume.pdf public/AliAkbar-Resume.pdf
+   
+   Step 2: If using a different filename, update:
+           File: app/api/resume-pdf/route.ts
+           Line: 7
+           Change: 'public', 'AliAkbar-Resume.pdf'
+           To: 'public', 'YOUR-RESUME-NAME.pdf'
+
+
+4. WORK EXPERIENCE
+────────────────────────────────────────────────────────────────────────────
+   File: data/resume-data.ts
+   
+   Look for: workExperience array
+   
+   Add/Edit entries:
+   {
+     company: "Company Name",
+     position: "Your Position",
+     startDate: "Jan 2023",
+     endDate: "Present",
+     description: "What you did at this job",
+     technologies: ["Tech1", "Tech2"]
+   }
+
+
+5. EDUCATION
+────────────────────────────────────────────────────────────────────────────
+   File: data/resume-data.ts
+   
+   Look for: education array
+   
+   Add/Edit entries:
+   {
+     institution: "University Name",
+     degree: "Bachelor of Science",
+     field: "Computer Science",
+     startDate: "2018",
+     endDate: "2022",
+     gpa: "3.8/4.0"
+   }
+
+
+6. SKILLS
+────────────────────────────────────────────────────────────────────────────
+   File: data/resume-data.ts
+   
+   Look for: skills section
+   
+   Add/Edit skill categories:
+   {
+     category: "Programming Languages",
+     items: ["Python", "JavaScript", "TypeScript"]
+   }
+
+
+7. PROJECTS
+────────────────────────────────────────────────────────────────────────────
+   File: data/projects-data.ts
+   
+   Add/Edit project entries:
+   {
+     id: "unique-id",
+     title: "Project Name",
+     description: "Project description",
+     longDescription: "Detailed description",
+     image: "/Portfolio/images/project-screenshot.png",
+     technologies: ["React", "Node.js"],
+     githubUrl: "https://github.com/username/repo",
+     liveUrl: "https://project-demo.com",
+     featured: true,
+     category: "Web Development",
+     date: "2023"
+   }
+   
+   Don't forget to add project images to: public/images/
+
+
+8. BLOG POSTS
+────────────────────────────────────────────────────────────────────────────
+   File: data/blog-data.ts
+   
+   Add/Edit blog post entries:
+   {
+     id: "unique-slug",
+     title: "Blog Post Title",
+     excerpt: "Short description",
+     content: "Full blog post content (HTML or text)",
+     date: "2023-12-01",
+     author: "Your Name",
+     tags: ["tag1", "tag2"],
+     featured: true,
+     image: "/Portfolio/images/blog-cover.png"
+   }
+
+
+9. SOCIAL MEDIA LINKS
+────────────────────────────────────────────────────────────────────────────
+   File: data/resume-data.ts
+   
+   Look for: personalInfo section
+   
+   Update:
+   - github: "your-github-username"
+   - linkedin: "your-linkedin-username"
+   - twitter: "your-twitter-username" (if added)
+
+
+10. WEBSITE COLORS & THEME
+────────────────────────────────────────────────────────────────────────────
+    File: tailwind.config.ts
+    
+    Look for: theme.extend.colors section
+    
+    Change colors:
+    - primary: Main brand color
+    - secondary: Secondary color
+    - accent: Accent color
+    
+    Or modify: app/globals.css for CSS variables
+
+
+11. NAVIGATION MENU
+────────────────────────────────────────────────────────────────────────────
+    File: components/header.tsx
+    
+    Look for: navigation links
+    
+    Add/Remove/Edit menu items:
+    <Link href="/your-page">Your Page</Link>
+
+
+12. FOOTER
+────────────────────────────────────────────────────────────────────────────
+    File: components/footer.tsx
+    
+    Change:
+    - Copyright text
+    - Footer links
+    - Social media icons
+
+
+13. HOMEPAGE HERO SECTION
+────────────────────────────────────────────────────────────────────────────
+    File: components/hero-section.tsx
+    
+    This pulls data from: data/resume-data.ts
+    
+    To customize layout/styling, edit hero-section.tsx directly
+
+
+14. CONTACT PAGE
+────────────────────────────────────────────────────────────────────────────
+    File: app/contact/page.tsx
+    
+    Change:
+    - Contact form fields
+    - Contact information displayed
+    - Form submission endpoint (if using)
+
+
+15. WEBSITE METADATA (SEO)
+────────────────────────────────────────────────────────────────────────────
+    File: app/layout.tsx
+    
+    Look for: metadata object
+    
+    Change:
+    - title: Website title
+    - description: Website description
+    - keywords: SEO keywords
+    - Open Graph images/data
+
+
+================================================================================
+                    HOW TO ADD NEW MEDIA FILES
+================================================================================
+
+1. IMAGES
+   Place in: public/images/your-image.png
+   Reference as: /Portfolio/images/your-image.png
+
+2. PDFs
+   Place in: public/your-document.pdf
+   Reference as: /Portfolio/your-document.pdf
+
+3. OTHER FILES
+   Place in: public/your-file.ext
+   Reference as: /Portfolio/your-file.ext
+
+
+================================================================================
+                    HOW TO DEPLOY CHANGES
+================================================================================
+
+After making changes:
+
+1. BUILD THE PROJECT
+   Command: npm run build
+
+2. DEPLOY TO GITHUB PAGES
+   Commands:
+   git checkout -b gh-pages-deploy-temp
+   git add -f out/
+   git commit -m "Deploy updates"
+   git subtree split --prefix out -b gh-pages-deploy
+   git push -f origin gh-pages-deploy:gh-pages
+   git checkout master
+   git branch -D gh-pages-deploy-temp gh-pages-deploy
+
+3. COMMIT SOURCE CODE CHANGES
+   Commands:
+   git add .
+   git commit -m "Update portfolio content"
+   git push
+
+
+================================================================================
+                    TESTING LOCALLY
+================================================================================
+
+To test your changes before deploying:
+
+1. Install dependencies (first time only):
+   npm install
+
+2. Start development server:
+   npm run dev
+
+3. Open in browser:
+   http://localhost:3000
+
+4. Make changes and see them live!
+
+
+================================================================================
+                    COMMON TASKS QUICK REFERENCE
+================================================================================
+
+Task: Change your name
+File: data/resume-data.ts → personalInfo.name
+
+Task: Update profile photo
+File: public/images/profile.png (replace file)
+
+Task: Add new project
+File: data/projects-data.ts → add new object to array
+
+Task: Change email address
+File: data/resume-data.ts → personalInfo.email
+
+Task: Update resume PDF
+File: public/AliAkbar-Resume.pdf (replace file)
+
+Task: Add new page
+Folder: Create new folder in app/ with page.tsx file
+
+Task: Change colors
+File: tailwind.config.ts or app/globals.css
+
+Task: Update social links
+File: data/resume-data.ts → personalInfo section
+
+
+================================================================================
+                    IMPORTANT NOTES
+================================================================================
+
+1. GitHub Pages Configuration:
+   - basePath is set to '/Portfolio' in next.config.mjs
+   - All media URLs must include /Portfolio/ prefix
+   - Site URL: https://wardaddy146.github.io/Portfolio/
+
+2. Dynamic Routes:
+   - Blog post dynamic routes require generateStaticParams for GitHub Pages
+   - Currently disabled to avoid build errors
+   - Use Vercel for full dynamic routing support
+
+3. Image Optimization:
+   - Images are set to unoptimized for GitHub Pages compatibility
+   - Compress images before adding to reduce load times
+
+4. Environment:
+   - This is a static export (no server-side features)
+   - API routes won't work on GitHub Pages
+   - Consider Vercel for advanced features
+
+
+================================================================================
+                    NEED HELP?
+================================================================================
+
+Common Issues:
+
+1. Build fails:
+   - Check for syntax errors in .ts/.tsx files
+   - Ensure all imports are correct
+   - Run: npm install to update dependencies
+
+2. Images not showing:
+   - Verify path includes /Portfolio/ prefix
+   - Check file exists in public/ folder
+   - Check file name spelling/case
+
+3. Changes not visible on GitHub Pages:
+   - Wait 2-5 minutes after deployment
+   - Clear browser cache (Ctrl+Shift+R)
+   - Check GitHub Actions for build status
+
+4. Styling issues:
+   - Run: npm run dev to test locally
+   - Check Tailwind classes are valid
+   - Inspect browser console for errors
+
+
+================================================================================
+                    END OF GUIDE
+================================================================================
