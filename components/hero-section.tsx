@@ -100,6 +100,24 @@ export function HeroSection() {
             <span className="sr-only">LinkedIn</span>
           </Link>
           <Link
+            href={`https://${resumeData.personalInfo.researchgate}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-zinc-400 hover:text-white transition-colors"
+          >
+            <Linkedin className="h-5 w-5" />
+            <span className="sr-only">ResearchGate</span>
+          </Link>
+          <Link
+            href={`https://${resumeData.personalInfo.orcid}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-zinc-400 hover:text-white transition-colors"
+          >
+            <Linkedin className="h-5 w-5" />
+            <span className="sr-only">ORCID</span>
+          </Link>
+          <Link
             href={`mailto:${resumeData.personalInfo.email}`}
             className="text-zinc-400 hover:text-white transition-colors"
           >

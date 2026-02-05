@@ -27,20 +27,17 @@ export type ResumeData = {
     location: string
     linkedin: string
     github: string | null
+    researchgate: string | null
+    orcid: string | null
     website: string
     photo?: string
-    yearsOfExperience: string
-    teamLeadExperience: string
   }
   summary: string[]
   skills: {
     languages: string[]
     architecture: string[]
-    cloud: string[]
     data: string[]
-    quality: string[]
   }
-  experience: WorkExperience[]
   hardSkills: string[]
   softSkills: string[]
   languages: Language[]
@@ -55,17 +52,16 @@ const resumeData: ResumeData = {
     location: "India",
     linkedin: "https://www.linkedin.com/in/ali-akbar-7a1565274/",
     github: "https://github.com/WarDaddy146/",
+    researchgate: "https://www.researchgate.net/profile/Ali-Akbar-118",
+    orcid: "https://orcid.org/0009-0006-2110-9111",
     website: "https://aliakbar146.com",
     photo: "/images/profile.png",
-    yearsOfExperience: "Constantly learning",
-    teamLeadExperience: "adaptable.",
   },
   summary: ["A young mind in training."],
   skills: {
-    languages: ["Python", "Qiskit", "Django REST"],
-    architecture: ["Django ORM", "Qiskit", "n8n Workflows"],
-    cloud: ["Colab", "GitHub", "IBM Quantum Library"],
-    data: ["SQLite", "MySQL", ],
+    languages: ["Python", "Qiskit", "Django ORM"],
+    architecture: ["Django ORM", "IBM Quantum Library", "n8n Workflows"],
+    data: ["SQLite", "MySQL" ],
 
   },
   // experience: [
@@ -84,10 +80,10 @@ const resumeData: ResumeData = {
   // ],
   hardSkills: [
     "Python",
-    "FastAPI",
-    "Django REST",
+    "Django ORM",
     "Qiskit",
-    "Workflow Automation"
+    "Workflow Automation",
+    ""
   ],
   softSkills: [
     "Problem Solving",
@@ -97,8 +93,13 @@ const resumeData: ResumeData = {
   ],
   languages: [
     {
+      name: "Hindi/Urdu",
+      level: "C2 Proficiency",
+      
+    },
+    {
       name: "English",
-      level: "Native Proficiency",
+      level: "C2 Proficiency",
       
     },
     {
@@ -113,21 +114,22 @@ const resumeData: ResumeData = {
     }
   ],
   publications: [
+    
+    {
+      title: "Evolutionary Computation: Potential and Limitations",
+      description: "A study on the Evolutionary computation and it's potentials in the modern computing trends.",
+      year: "2025",
+    },
     {
       title: "Revolutioninzing Evolutionary Computation with Quantum-Inspired Algorithms",
-      description: "A comprehensive study on the integration of quantum-inspired algorithms into evolutionary computation to enhance optimization processes.",
+      description: "A comprehensive study on the potential integration of Evolutionary computation into hybrid computing models.",
       year: "2024",
     },
-    // {
-    //   title: "Estudos de Técnicas de Mineração de Dados Aplicadas em Ambientes Sistematizados de Bibliotecas",
-    //   description: "A study on data mining techniques applied to systematized library environments.",
-    //   year: "2018",
-    // },
-    // {
-    //   title: "Carros de Combate na Selva: Utilização de VBCCCs no Teatro de Operações da Amazônia",
-    //   description: "A publication on combat vehicles in jungle environments, focusing on operations in the Amazon.",
-    //   year: "2017",
-    // },
+    {
+      title: "Inflationary Model as an Alternative to the Big Bang Theory: A Comprehensive Review",
+      description: "A study on the Origin of the Cosmos with the Inflationary model.",
+      year: "Draft upon request",
+    }
   ],
 }
 
