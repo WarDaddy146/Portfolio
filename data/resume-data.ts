@@ -63,7 +63,7 @@ const resumeData: ResumeData = {
     yearsOfExperience: "Early career",
     teamLeadExperience: "Developing leadership skills",
   },
-  summary: ["A young mind in training."],
+  summary: ["I'm a Computer Science Engineering student who learns by building and solving problems hands-on. My curiosity about how things work, from code to larger systems, drives me to explore different areas of technology. I adapt quickly, whether picking up new frameworks, automating tasks, or working on research projects. My background in diversified fields helps me approach challenges from different angles. I focus on understanding fundamentals and achieving optimal solutions."],
   skills: {
     languages: ["Python", "Qiskit", "Django ORM", "HTML", "CSS"],
     data: ["SQLite", "MySQL"],
