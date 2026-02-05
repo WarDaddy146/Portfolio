@@ -7,7 +7,7 @@ import { PlaceholderImage } from "@/components/ui/placeholder-image"
 
 export const metadata = {
   title: "Publications",
-  description: "Academic and technical publications authored or contributed to by Giovani Moutinho.",
+  description: "Academic and technical publications authored or contributed to by Ali Akbar.",
 }
 
 // Sample publications data

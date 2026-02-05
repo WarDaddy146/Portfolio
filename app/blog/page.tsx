@@ -9,7 +9,7 @@ import { allBlogPosts } from "@/data/blog-data"
 
 export const metadata = {
   title: "Blog",
-  description: "Technical articles, insights, and thoughts on software engineering by Giovani Moutinho.",
+  description: "Technical articles, insights, and thoughts on AI/ML and technology by Ali Akbar.",
 }
 
 export default function BlogPage() {
@@ -52,7 +52,7 @@ export default function BlogPage() {
                     {post.readTime}
                   </div>
                 </div>
-                <ShareButton title={post.title} url={`https://mgiovani.com/blog/${post.slug}`} className="ml-auto" />
+                <ShareButton title={post.title} url={`https://aliakbar146.com/blog/${post.slug}`} className="ml-auto" />
               </div>
               <h2 className="text-xl font-bold mb-2">{post.title}</h2>
               <p className="text-zinc-400 mb-4 flex-grow">{post.excerpt}</p>

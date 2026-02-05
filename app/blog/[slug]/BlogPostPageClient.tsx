@@ -104,7 +104,7 @@ export function BlogPostPageClient({ params }: { params: { slug: string } }) {
   return (
     <div className="container py-12 relative">
       {/* Floating share button - client component */}
-      <FloatingShareButton title={post.title} url={`https://mgiovani.com/blog/${params.slug}`} />
+      <FloatingShareButton title={post.title} url={`https://aliakbar146.com/blog/${params.slug}`} />
 
       <div className="max-w-3xl mx-auto">
         <Link href="/blog">

@@ -8,7 +8,7 @@ import projectsData from "@/data/projects-data"
 
 export const metadata = {
   title: "Projects",
-  description: "A collection of technical projects and software engineering work by Giovani Moutinho.",
+  description: "A collection of technical projects and software engineering work by Ali Akbar.",
 }
 
 export default function ProjectsPage() {
@@ -56,7 +56,7 @@ export default function ProjectsPage() {
                     </Button>
                   </Link>
                 )}
-                <Link href={`${project.github}?source=mgiovani.com`} target="_blank" rel="noopener noreferrer">
+                <Link href={project.github} target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" size="sm" className="border-white/20 hover:bg-white/10">
                     <Github className="mr-2 h-4 w-4" />
                     Code

@@ -5,7 +5,7 @@ import resumeData from "@/data/resume-data"
 
 export const metadata = {
   title: "Contact",
-  description: `Get in touch with Giovani Moutinho for opportunities, collaborations, or just to say hello.`,
+  description: `Get in touch with Ali Akbar for opportunities, collaborations, or just to say hello.`,
 }
 
 export default function ContactPage() {

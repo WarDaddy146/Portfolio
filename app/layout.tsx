@@ -8,24 +8,24 @@ export const metadata: Metadata = {
     template: "%s | Ali Akbar",
   },
   description:
-    "Senior Software Engineer specializing in backend development with Python.",
-  keywords: ["Software Engineer", "Python Developer", "FastAPI", "GraphQL", "Backend Development", "Giovani Moutinho"],
+    "AI/ML Engineer specializing in quantum computing, machine learning, and web development.",
+  keywords: ["AI Engineer", "ML Engineer", "Python Developer", "Qiskit", "Quantum Computing", "Ali Akbar"],
   authors: [{ name: "Ali Akbar" }],
   creator: "Ali Akbar",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://mgiovani.com",
-    title: "Giovani Moutinho | Senior Software Engineer",
+    url: "https://aliakbar146.com",
+    title: "Ali Akbar | AI/ML Engineer",
     description:
-      "Senior Software Engineer specializing in backend development with Python, FastAPI, and cloud solutions.",
-    siteName: "Giovani Moutinho Portfolio",
+      "AI/ML Engineer specializing in quantum computing, machine learning, and web development.",
+    siteName: "Ali Akbar Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Giovani Moutinho | Senior Software Engineer",
+    title: "Ali Akbar | AI/ML Engineer",
     description:
-      "Senior Software Engineer specializing in backend development with Python, FastAPI, and cloud solutions.",
+      "AI/ML Engineer specializing in quantum computing, machine learning, and web development.",
   },
   icons: {
     icon: "/favicon.ico",

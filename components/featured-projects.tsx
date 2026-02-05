@@ -76,7 +76,7 @@ export function FeaturedProjects({ className, showViewAll = true }: FeaturedProj
                     </Button>
                   </Link>
                 )}
-                <Link href={`${project.github}?source=mgiovani.com`} target="_blank" rel="noopener noreferrer" className="flex-1">
+                <Link href={project.github} target="_blank" rel="noopener noreferrer" className="flex-1">
                   <Button variant="outline" size="sm" className="w-full group">
                     <Github className="mr-2 h-4 w-4 transition-transform group-hover:scale-110" />
                     Code
