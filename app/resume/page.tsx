@@ -6,6 +6,8 @@ import { Briefcase, MapPin, User } from "lucide-react"
 import { ResumeDownloadButton } from "@/components/resume-download-button"
 import resumeData from "@/data/resume-data"
 
+export const dynamic = 'force-static'
+
 export const metadata = {
   title: "Resume",
   description: `Professional experience, skills, and qualifications of ${resumeData.personalInfo.name}, ${resumeData.personalInfo.title}.`,
@@ -27,7 +29,7 @@ export default function ResumePage() {
           <div className="space-y-4">
             <h2 className="text-2xl font-bold">Summary</h2>
             <p>
-              {resumeData.personalInfo.yearsOfExperience} and {resumeData.personalInfo.teamLeadExperience}
+              {resumeData.summary.join(" ")}
             </p>
           </div>
 
@@ -65,22 +67,22 @@ export default function ResumePage() {
                   <h3 className="font-semibold">Languages & Frameworks</h3>
                   <p className="text-muted-foreground">{resumeData.skills.languages.join(", ")}</p>
                 </div>
-                <div>
-                  <h3 className="font-semibold">Architecture & Patterns</h3>
-                  <p className="text-muted-foreground">{resumeData.skills.architecture.join(", ")}</p>
-                </div>
-                <div>
-                  <h3 className="font-semibold">Tools</h3>
-                  <p className="text-muted-foreground">{resumeData.skills.cloud.join(", ")}</p>
-                </div>
+                {resumeData.skills.architecture && resumeData.skills.architecture.length > 0 && (
+                  <div>
+                    <h3 className="font-semibold">Architecture & Patterns</h3>
+                    <p className="text-muted-foreground">{resumeData.skills.architecture.join(", ")}</p>
+                  </div>
+                )}
+                {resumeData.skills.cloud && resumeData.skills.cloud.length > 0 && (
+                  <div>
+                    <h3 className="font-semibold">Tools</h3>
+                    <p className="text-muted-foreground">{resumeData.skills.cloud.join(", ")}</p>
+                  </div>
+                )}
                 <div>
                   <h3 className="font-semibold">Data & Messaging</h3>
                   <p className="text-muted-foreground">{resumeData.skills.data.join(", ")}</p>
                 </div>
-                {/* <div>
-                  <h3 className="font-semibold">Quality</h3>
-                  <p className="text-muted-foreground">{resumeData.skills.quality.join(", ")}</p>
-                </div> */}
               </CardContent>
             </Card>
           </div>

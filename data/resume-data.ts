@@ -31,11 +31,15 @@ export type ResumeData = {
     orcid: string | null
     website: string
     photo?: string
+    yearsOfExperience?: string
+    teamLeadExperience?: string
   }
   summary: string[]
   skills: {
     languages: string[]
     data: string[]
+    architecture?: string[]
+    cloud?: string[]
   }
   hardSkills: string[]
   softSkills: string[]
@@ -55,12 +59,15 @@ const resumeData: ResumeData = {
     orcid: "https://orcid.org/0009-0006-2110-9111",
     website: "https://aliakbar146.com",
     photo: "/images/profile.png",
+    yearsOfExperience: "Early career",
+    teamLeadExperience: "Developing leadership skills",
   },
   summary: ["A young mind in training."],
   skills: {
-    languages: ["Python", "Qiskit", "Django ORM", "HTML", "CSS", ""],
-    data: ["SQLite", "MySQL" ],
-
+    languages: ["Python", "Qiskit", "Django ORM", "HTML", "CSS"],
+    data: ["SQLite", "MySQL"],
+    architecture: ["RESTful APIs", "Web Applications"],
+    cloud: ["Git", "GitHub", "VS Code"],
   },
   // experience: [
   //   {
