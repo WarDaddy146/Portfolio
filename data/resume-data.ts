@@ -35,7 +35,6 @@ export type ResumeData = {
   summary: string[]
   skills: {
     languages: string[]
-    architecture: string[]
     data: string[]
   }
   hardSkills: string[]
@@ -59,8 +58,7 @@ const resumeData: ResumeData = {
   },
   summary: ["A young mind in training."],
   skills: {
-    languages: ["Python", "Qiskit", "Django ORM"],
-    architecture: ["Django ORM", "IBM Quantum Library", "n8n Workflows"],
+    languages: ["Python", "Qiskit", "Django ORM", "HTML", "CSS", ""],
     data: ["SQLite", "MySQL" ],
 
   },

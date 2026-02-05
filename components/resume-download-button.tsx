@@ -5,7 +5,7 @@ import { Download } from "lucide-react"
 
 export function ResumeDownloadButton() {
   const handleOpenPdf = () => {
-    window.open("/Portfolio/AliAkbar-Resume.pdf", "_blank")
+    window.open("/AliAkbar-Resume.pdf", "_blank")
   }
 
   return (

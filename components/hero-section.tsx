@@ -135,7 +135,7 @@ export function HeroSection() {
       >
         <div className="relative w-48 h-48 sm:w-56 sm:h-56 rounded-full overflow-hidden border-4 border-white/10">
           <Image
-            src="/Portfolio/images/profile.png"
+            src="/images/profile.png"
             alt={resumeData.personalInfo.name}
             fill
             className="object-cover object-center"
