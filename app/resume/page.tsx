@@ -165,6 +165,20 @@ export default function ResumePage() {
                   </Link>
                 </div>
               )}
+              {resumeData.personalInfo.researchgate && (
+                <div className="flex items-center gap-2">
+                  <Link href={resumeData.personalInfo.researchgate} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                    ResearchGate
+                  </Link>
+                </div>
+              )}
+              {resumeData.personalInfo.orcid && (
+                <div className="flex items-center gap-2">
+                  <Link href={resumeData.personalInfo.orcid} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                    ORCID
+                  </Link>
+                </div>
+              )}
               <div className="flex items-center gap-2">
                 <Link href={resumeData.personalInfo.website} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                   Website
