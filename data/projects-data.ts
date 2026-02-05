@@ -25,10 +25,10 @@ const projects: Project[] = [
     title: "Melt and Munch - E-Comerce Platform",
     description: "A simple E-Commerce platform for confectionaries.",
     image:
-      "https://camo.githubusercontent.com/4b1917eff3bda4e61188df670776876b702136fb1dfb9fcbd4bdb8d68189069d/68747470733a2f2f696d616765732d6e612e73736c2d696d616765732d616d617a6f6e2e636f6d2f696d616765732f492f36314c4e416f324b39524c2e706e67",
+      "/home/ali/Downloads/giovani-dev-portfolio-website/public/images/mnm_logo.png",
     tags: ["Python", "Django ORM", "WebDevelopment"],
     github: "https://github.com/mgiovani/my-instants-discord-bot",
-    demo: "https://discord.com/oauth2/authorize?client_id=836019264124354571",
+    demo: null
   },
   {
     id: 2,

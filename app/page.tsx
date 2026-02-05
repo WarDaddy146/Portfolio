@@ -24,7 +24,7 @@ export default function Home() {
             <div>
               <Link href="/resume" className="inline-flex items-center text-primary hover:text-primary/80 group">
                 <span className="underline underline-offset-4 decoration-primary/30 group-hover:decoration-primary/60 transition-colors">
-                  View my full resume
+                  View my Resume details!
                 </span>
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
