@@ -1,13 +1,11 @@
 "use client"
 
-"use client"
-
 import { Button } from "@/components/ui/button"
 import { Download } from "lucide-react"
 
 export function ResumeDownloadButton() {
   const handleOpenPdf = () => {
-    window.open("/api/resume-pdf", "_blank")
+    window.open("/Portfolio/AliAkbar-Resume.pdf", "_blank")
   }
 
   return (
