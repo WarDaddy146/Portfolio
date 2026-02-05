@@ -38,7 +38,7 @@ export function ServerHeroSection() {
 
         <div className="flex gap-6">
           <Link
-            href={`https://${resumeData.personalInfo.github}`}
+            href={resumeData.personalInfo.github || "#"}
             target="_blank"
             rel="noopener noreferrer"
             className="text-zinc-400 hover:text-white transition-colors"
@@ -47,7 +47,7 @@ export function ServerHeroSection() {
             <span className="sr-only">GitHub</span>
           </Link>
           <Link
-            href={`https://${resumeData.personalInfo.linkedin}`}
+            href={resumeData.personalInfo.linkedin}
             target="_blank"
             rel="noopener noreferrer"
             className="text-zinc-400 hover:text-white transition-colors"

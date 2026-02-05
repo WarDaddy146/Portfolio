@@ -28,27 +28,29 @@ export function ResumePDFTemplate() {
                 <span className="resume-skill-bullet">●</span> Languages & Frameworks (
                 {resumeData.skills.languages.join(", ")})
               </li>
-              <li className="resume-skill-item">
-                <span className="resume-skill-bullet">●</span> Architecture & Patterns (
-                {resumeData.skills.architecture.join(", ")})
-              </li>
-              {/* <li className="resume-skill-item">
-                <span className="resume-skill-bullet">●</span> Cloud & DevOps ({resumeData.skills.cloud.join("; ")})
-              </li>
+              {resumeData.skills.architecture && resumeData.skills.architecture.length > 0 && (
+                <li className="resume-skill-item">
+                  <span className="resume-skill-bullet">●</span> Architecture & Patterns (
+                  {resumeData.skills.architecture.join(", ")})
+                </li>
+              )}
+              {resumeData.skills.cloud && resumeData.skills.cloud.length > 0 && (
+                <li className="resume-skill-item">
+                  <span className="resume-skill-bullet">●</span> Cloud & DevOps ({resumeData.skills.cloud.join("; ")})
+                </li>
+              )}
               <li className="resume-skill-item">
                 <span className="resume-skill-bullet">●</span> Data & Messaging ({resumeData.skills.data.join(", ")})
               </li>
-              <li className="resume-skill-item">
-                <span className="resume-skill-bullet">●</span> Quality ({resumeData.skills.quality.join(", ")})
-              </li> */}
             </ul>
           </section>
 
           {/* Experience Section */}
-          <section className="resume-section">
-            <h3 className="resume-section-title">LATEST PROFESSIONAL EXPERIENCE</h3>
+          {resumeData.experience && resumeData.experience.length > 0 && (
+            <section className="resume-section">
+              <h3 className="resume-section-title">LATEST PROFESSIONAL EXPERIENCE</h3>
 
-            {resumeData.experience.map((job, index) => (
+              {resumeData.experience.map((job, index) => (
               <div key={index} className="resume-job">
                 <div className="resume-job-header">
                   <div className="resume-job-company-title">
@@ -68,7 +70,8 @@ export function ResumePDFTemplate() {
                 </ul>
               </div>
             ))}
-          </section>
+            </section>
+          )}
         </div>
       </div>
     </div>

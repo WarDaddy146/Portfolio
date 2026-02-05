@@ -45,6 +45,7 @@ export type ResumeData = {
   softSkills: string[]
   languages: Language[]
   publications: Publication[]
+  experience?: WorkExperience[]
 }
 
 const resumeData: ResumeData = {
@@ -83,12 +84,12 @@ const resumeData: ResumeData = {
   //     ]
   //   },
   // ],
+  experience: [],
   hardSkills: [
     "Python",
     "Django ORM",
     "Qiskit",
     "Workflow Automation",
-    ""
   ],
   softSkills: [
     "Problem Solving",
