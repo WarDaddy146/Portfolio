@@ -2,7 +2,6 @@
 
 import type React from "react"
 import { Inter } from "next/font/google"
-import { Analytics } from "@vercel/analytics/react"
 import "./globals.css"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
@@ -26,7 +25,6 @@ export default function ClientLayout({
           </Suspense>
           <Footer />
           <ToastProvider />
-          <Analytics />
         </div>
       </body>
     </html>
