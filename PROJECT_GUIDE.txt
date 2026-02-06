@@ -200,6 +200,23 @@ giovani-dev-portfolio-website/
    - github: "your-github-username"
    - linkedin: "your-linkedin-username"
    - twitter: "your-twitter-username" (if added)
+   
+   Academic Profile Links (Footer only):
+   File: components/footer.tsx
+   
+   The footer includes academic profile links:
+   - ORCID: Uses BookOpen icon from lucide-react
+     URL: https://www.orcid.org/YOUR-ORCID-ID
+   
+   - ResearchGate: Uses FlaskConical icon from lucide-react
+     URL: https://www.researchgate.net/profile/YOUR-PROFILE
+   
+   To update:
+   1. Change the href attribute to your profile URLs
+   2. Available lucide-react icons for academic profiles:
+      - BookOpen, GraduationCap, ScrollText (for ORCID)
+      - FlaskConical, Microscope, Atom, Beaker (for ResearchGate)
+   3. Import icons at top: import { IconName } from "lucide-react"
 
 
 10. WEBSITE COLORS & THEME
@@ -231,9 +248,24 @@ giovani-dev-portfolio-website/
     File: components/footer.tsx
     
     Change:
-    - Copyright text
-    - Footer links
-    - Social media icons
+    - Copyright text (line ~10): Update "Ali Akbar" to your name
+    - Social media links:
+      * GitHub (line ~15): Update href to your GitHub profile
+      * LinkedIn (line ~23): Update href to your LinkedIn profile
+      * ORCID (line ~31): Update href to your ORCID profile
+        Current icon: BookOpen (can change to GraduationCap, ScrollText, etc.)
+      * ResearchGate (line ~39): Update href to your ResearchGate profile
+        Current icon: FlaskConical (can change to Microscope, Atom, etc.)
+    
+    - To change icons:
+      1. Import desired icon: import { IconName } from "lucide-react"
+      2. Replace icon component: <IconName className="h-5 w-5" />
+      3. Available lucide-react icons: https://lucide.dev/icons/
+    
+    - To add more social links:
+      1. Copy an existing Link block
+      2. Update href, icon, and sr-only text
+      3. Import any new icons needed
 
 
 13. HOMEPAGE HERO SECTION
@@ -356,6 +388,9 @@ File: tailwind.config.ts or app/globals.css
 
 Task: Update social links
 File: data/resume-data.ts → personalInfo section
+
+Task: Update academic profile links (ORCID/ResearchGate)
+File: components/footer.tsx → Update href URLs and icons
 
 
 ================================================================================
