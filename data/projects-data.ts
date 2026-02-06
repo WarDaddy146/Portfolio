@@ -4,28 +4,28 @@ export type Project = {
   description: string
   image?: string | null
   tags: string[]
-  github: string
+  github: string | null
   demo: string | null
 }
 
 const projects: Project[] = [
-  // {
-  //   id: 4,
-  //   title: "AI Cursor Init",
-  //   description:
-  //     "The AI-powered documentation framework that lives inside your IDE. Generate Architecture Decision Records, system diagrams, and onboarding guides with simple slash commands.",
-  //   image:
-  //     "https://github.com/mgiovani/ai-cursor-init/raw/main/images/system-architecture-example.png",
-  //   tags: ["AI", "Documentation", "IDE", "Framework"],
-  //   github: "https://github.com/mgiovani/ai-cursor-init/",
-  //   demo: "https://github.com/mgiovani/ai-cursor-init/?tab=readme-ov-file#-visual-showcase",
-  // },
+  {
+    id: 4,
+    title: "Aerial Versetality Agent (A.V.A.)",
+    description:
+      "A versetile, amphibious Unmanned Aerial Vehicle designated as a military-grade Reconnaissance craft.",
+    image:
+      "https://github.com/mgiovani/ai-cursor-init/raw/main/images/system-architecture-example.png",
+    tags: ["Electronics", "Arduino"],
+    github: null,
+    demo: null
+  },
   {
     id: 1,
     title: "Melt and Munch - E-Comerce Platform",
     description: "A simple E-Commerce platform for confectionaries.",
     image:
-      "/home/ali/Downloads/giovani-dev-portfolio-website/public/images/mnm_logo.png",
+      "images/mnm_logo.png",
     tags: ["Python", "Django ORM", "WebDevelopment"],
     github: "https://github.com/mgiovani/my-instants-discord-bot",
     demo: null

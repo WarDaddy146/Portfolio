@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Github, Linkedin } from "lucide-react"
+import { Github, Linkedin, BookOpen, FlaskConical } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -28,6 +28,24 @@ export default function Footer() {
           >
             <Linkedin className="h-5 w-5" />
             <span className="sr-only">LinkedIn</span>
+          </Link>
+          <Link
+            href="https://www.orcid.org/0009-0006-2110-9111"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-primary"
+          >
+            <BookOpen className="h-5 w-5" />
+            <span className="sr-only">ORCID</span>
+          </Link>
+          <Link
+            href="https://www.researchgate.net/profile/Ali-Akbar-118"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-primary"
+          >
+            <FlaskConical className="h-5 w-5" />
+            <span className="sr-only">ResearchGate</span>
           </Link>
         </div>
       </div>

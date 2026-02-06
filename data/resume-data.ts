@@ -58,32 +58,18 @@ const resumeData: ResumeData = {
     github: "https://github.com/WarDaddy146/",
     researchgate: "https://www.researchgate.net/profile/Ali-Akbar-118",
     orcid: "https://orcid.org/0009-0006-2110-9111",
-    website: "https://aliakbar146.com",
+    website: "https://aliakbar.dev",
     photo: "/images/profile.png",
     yearsOfExperience: "Early career",
     teamLeadExperience: "Developing leadership skills",
   },
   summary: ["I'm a Computer Science Engineering student who learns by building and solving problems hands-on. My curiosity about how things work, from code to larger systems, drives me to explore different areas of technology. I adapt quickly, whether picking up new frameworks, automating tasks, or working on research projects. My background in diversified fields helps me approach challenges from different angles. I focus on understanding fundamentals and achieving optimal solutions."],
   skills: {
-    languages: ["Python", "Qiskit", "Django ORM", "HTML", "CSS"],
+    languages: ["Python", "Qiskit", "Arduino IDE", "HTML", "CSS"],
     data: ["SQLite", "MySQL"],
-    architecture: ["RESTful APIs", "Web Applications"],
-    cloud: ["Git", "GitHub", "VS Code"],
+    architecture: ["Django ORM", "Web Applications", "2 Qubit Systems"],
+    cloud: ["Git", "GitHub", "VS Code", "n8n", "Jupyter Notebook", "Google Colab", "Linux (Ubuntu)"],
   },
-  // experience: [
-  //   {
-  //     title: "AI/ML Engineer",
-  //     company: "Prenuvo",
-  //     period: "Jan 2023 - Present",
-  //     location: "Remote, United States",
-  //     responsibilities: [
-  //       "Implemented performance enhancements that cut response times by 25% through optimized database access and resource management.",
-  //       "Designed and built backend support for AI-powered tools used by radiologists, boosting workflow efficiency.",
-  //       "Created and rolled out a self-service discount system, giving Sales fine-grained control over promotions.",
-  //       "Led an external-service integration that improved operational efficiency and contributed to seasonal revenue gains.",
-  //     ]
-  //   },
-  // ],
   experience: [],
   hardSkills: [
     "Python",
