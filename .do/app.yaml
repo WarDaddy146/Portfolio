@@ -5,8 +5,8 @@ services:
     repo: WarDaddy146/Portfolio
     branch: master
     deploy_on_push: true
-  build_command: npm install --legacy-peer-deps && npm run build
-  run_command: npm start
+  build_command: pnpm install && pnpm run build
+  run_command: pnpm start
   environment_slug: node-js
   http_port: 3000
   instance_count: 1
