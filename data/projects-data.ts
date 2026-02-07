@@ -27,7 +27,7 @@ const projects: Project[] = [
     image:
       "images/mnm_logo.png",
     tags: ["Python", "Django ORM", "WebDevelopment"],
-    github: "https://github.com/mgiovani/my-instants-discord-bot",
+    github: "https://github.com/wardaddy146/melt-munch",
     demo: null
   },
   {
@@ -37,7 +37,7 @@ const projects: Project[] = [
     image:
       "https://camo.githubusercontent.com/1b6684c7c3ad58073423a154fa0709eb215c096fec5aa32b6a430240aaa7ce55/68747470733a2f2f692e696d6775722e636f6d2f733134694f54392e706e67",
     tags: ["Python", "Qiskit", "IBM Quantum"],
-    github: "https://github.com/mgiovani/base16-whatsapp",
+    github: "https://github.com",
     demo: null,
   },
   {

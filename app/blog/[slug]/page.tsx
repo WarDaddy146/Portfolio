@@ -1,23 +1,38 @@
 import { BlogPostPageClient } from "./BlogPostPageClient"
 import type { Metadata } from "next"
+import { allBlogPosts } from "@/data/blog-data"
 
 // Disable dynamic params for static export
 export const dynamicParams = false
 
 // Generate static paths for all blog posts
 export async function generateStaticParams() {
-  // Return an empty array if you don't have blog posts yet
-  // or add your blog post slugs here
-  return []
+  return allBlogPosts.map((post) => ({
+    slug: post.slug,
+  }))
 }
 
 // This would typically come from a CMS or markdown files
 const getPostBySlug = (slug: string) => {
+  const post = allBlogPosts.find((p) => p.slug === slug)
+  
+  if (!post) {
+    return {
+      title: "Post Not Found",
+      date: "",
+      readTime: "",
+      image: null,
+      content: "<p>The blog post you're looking for could not be found.</p>",
+      tags: [],
+    }
+  }
+
+  // Generate full content based on the blog post data
   return {
-    title: "Building a Modern Web Application with Next.js and Tailwind CSS",
-    date: "March 15, 2023",
-    readTime: "10 min read",
-    image: "/placeholder.svg?height=500&width=1200&text=Next.js+and+Tailwind",
+    title: post.title,
+    date: post.date,
+    readTime: post.readTime,
+    image: post.image,
     content: `
       <p>Next.js has emerged as one of the most popular React frameworks for building modern web applications. Combined with Tailwind CSS, it provides a powerful toolkit for creating responsive, performant, and visually appealing websites.</p>
       
@@ -98,7 +113,7 @@ vercel</code></pre>
       
       <p>In future articles, we'll explore more advanced topics such as authentication, API routes, and optimizing performance in Next.js applications.</p>
     `,
-    tags: ["Next.js", "Tailwind CSS", "React", "Web Development"],
+    tags: post.tags,
   }
 }
 
