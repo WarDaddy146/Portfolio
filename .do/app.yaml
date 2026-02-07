@@ -1,0 +1,15 @@
+name: ali-app
+services:
+- name: web
+  github:
+    repo: WarDaddy146/Portfolio
+    branch: master
+    deploy_on_push: true
+  build_command: npm run build
+  run_command: npm start
+  environment_slug: node-js
+  instance_count: 1
+  instance_size_slug: basic-xxs
+  envs:
+  - key: NODE_ENV
+    value: production
